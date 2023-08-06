@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+# This script configures Nginx to redirect /redirect_me to another page with a 301 status.
+
+# Install Nginx if not already installed (assuming you have already completed the 1-install_nginx_web_server.sh script)
+if ! [ -x "$(command -v nginx)" ]; then
+  sudo apt-get update
+  sudo apt-get install -y nginx
+fi
+
+# Check if Nginx is installed correctly
+if ! [ -x "$(command -v nginx)" ]; then
+  echo "Error: Nginx installation failed. Exiting."
+  exit 1
+fi
+
+# Create a configuration file for the redirection
+sudo bash -c 'cat > /etc/nginx/sites-available/redirect_me <<EOF
+server {
+    listen 80;
+    server_name _;
+
+    location /redirect_me {
+        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+    }
+
+    # Include the default Nginx server block configuration
+    include /etc/nginx/sites-available/default;
+}
+EOF'
+
+# Enable the redirection site by creating a symbolic link
+sudo ln -s /etc/nginx/sites-available/redirect_me /etc/nginx/sites-enabled/
+
+# Test the Nginx configuration for syntax errors
+sudo nginx -t
+
+# Restart Nginx to apply the changes
+sudo /etc/init.d/nginx restart
+
+exit 0
+

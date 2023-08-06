@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# This script installs Nginx web server and configures it to meet the requirements.
+
+# Update the package list and install Nginx with the -y flag to automatically confirm installations
+sudo apt-get update
+sudo apt-get install -y nginx
+
+# Check if Nginx is installed successfully
+if ! [ -x "$(command -v nginx)" ]; then
+  echo "Error: Nginx installation failed. Exiting."
+  exit 1
+fi
+
+# Configure Nginx to listen on port 80 and serve the Holberton School page
+echo "Holberton School for the win!" | sudo tee /var/www/html/index.html
+
+# Restart Nginx (You can't use systemctl, so we will use the following command)
+sudo /etc/init.d/nginx restart
+
+exit 0
+
