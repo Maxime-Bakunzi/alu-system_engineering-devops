@@ -1,20 +1,67 @@
-# Puppet manifest to install nginx
-package { 'nginx':
-  ensure => installed,
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found - 404</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+    }
 
-file_line { 'aaaaa':
-  ensure => 'present',
-  path   => '/etc/nginx/sites-available/default',
-  after  => 'listen 80 default_server;',
-  line   => 'rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;',
-}
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
 
-file { '/var/www/html/index.html':
-  content => 'Hello World!',
-}
+    .logo {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+    }
 
-service { 'nginx':
-  ensure  => running,
-  require => Package['nginx'],
-}
+    h1 {
+      font-size: 48px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+	font-size: 38px;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #777;
+      margin-bottom: 30px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .cta-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3>Elvi$</h3>
+    <h1>Oops! Page Not Found</h1>
+    <p>Ceci n'est pas une page.</p>
+    <a href="https://elvisguy.tech" class="cta-btn">Let's Get Back on Track</a>
+  </div>
+</body>
+</html>
