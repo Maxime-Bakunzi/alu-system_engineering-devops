@@ -62,7 +62,3 @@ This repository contains instructions and configurations for two firewall config
 
 ---
 
-Remember to exercise caution when modifying firewall rules. Ensure you have backup access methods to the server in case of misconfiguration.
-```
-
-You can copy and paste this Markdown content into a `README.md` file within your repository and customize it further as needed.
