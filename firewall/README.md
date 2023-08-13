@@ -1,5 +1,3 @@
-
-```markdown
 # Firewall Configuration Projects
 
 This repository contains instructions and configurations for two firewall configuration projects using the Uncomplicated Firewall (ufw) tool. These projects involve setting up a firewall to control incoming traffic and implementing port forwarding.
@@ -18,7 +16,7 @@ This repository contains instructions and configurations for two firewall config
 1. Install ufw (if not already installed):
    ```bash
    sudo apt-get install ufw
-   ```
+```
 
 2. Configure ufw rules:
    ```bash
