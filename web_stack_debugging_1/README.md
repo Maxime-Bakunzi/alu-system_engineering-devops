@@ -56,5 +56,3 @@ The Bash script (`configure_nginx.sh`) performs the following steps:
 
 If you encounter any issues or have further questions, feel free to reach out.
 
-
-Replace `"your-username"` with your actual GitHub username in the cloning step, and adjust any other placeholders as needed. This `README.md` provides an overview of the project, instructions for usage, script details, and licensing information.
