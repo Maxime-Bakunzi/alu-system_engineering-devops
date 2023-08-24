@@ -1,4 +1,6 @@
-# Debugging Project: Apache Docker Container
+# web_stack_debugging_0
+
+### Debugging Project: Apache Docker Container
 
 In this debugging project, the goal is to get an Apache web server running within a Docker container and ensure it returns a page containing "Hello Holberton" when accessing the root of the server.
 
