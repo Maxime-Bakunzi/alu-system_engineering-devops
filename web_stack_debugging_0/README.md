@@ -82,4 +82,3 @@ In this debugging project, the goal is to get an Apache web server running withi
 By following the steps above, you should be able to successfully run an Apache web server within a Docker container and have it return the "Hello Holberton" page when accessing the root of the server.
 ```
 
-Remember to replace `<container_id_or_name>` with the actual ID or name of your running Docker container. Also, make sure to tailor the paths and instructions to match the specific Docker image and setup you're using.
